@@ -10,13 +10,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const locations = [
     {
         name: "Güney Kampüs",
-        coords: [41.08323066260489, 29.05202046287095],
+        coords: [41.08367194006505, 29.052383463943805],
         tweet: "1410521715835293701",
         date: ["Jul 1, 2021", "Sep 2, 2021", "Jun 26, 2023"]
     },
     {
         name: "Moc Meydan İstanbul",
-        coords: [41.02459881272299, 29.126871152857763],
+        coords: [41.0245238902176, 29.126823819355998],
         tweet: "1411307279136215046",
         date: ["Jul 3, 2021"]
     },
@@ -58,7 +58,7 @@ const locations = [
     },
     {
         name: "Kava Coffee",
-        coords: [40.98588943953642, 29.02373429518453],
+        coords: [41.02494627691233, 28.97841599462193],
         tweet: "1433839844401324034",
         date: ["Sep 3, 2021"]
     },
