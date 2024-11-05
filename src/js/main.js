@@ -463,32 +463,20 @@ if (L.Browser.mobile) {
         map.panTo(map.unproject(px), { animate: true, duration: 0.5 });
     });
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    var infoIcon = document.getElementById('info-icon');
-    if (infoIcon) {
-        var infoModal = document.createElement('div');
-        infoModal.id = 'info-modal'; // Modal'a bir ID ekleyin
-        infoModal.style.display = 'none'; // Başlangıçta gizli olmalı
-        infoModal.innerHTML = `
-            <div>
-                <p>Kafelerin isimlerine tıklayarak Google Maps'te konumlarını görüntüleyebilirsiniz.</p>
-            </div>
-        `;
-        document.body.appendChild(infoModal);
-        var mapContainer = document.getElementById('map-container');
-
-        infoIcon.addEventListener('click', function() {
-            infoModal.style.display = 'block'; // Göster
-        });
-
-        // Harita üzerine tıklanınca popup'ı kapat
-        mapContainer.addEventListener('click', function(e) {
-            if (e.target !== infoIcon) {
-                infoModal.style.display = 'none';
-            }
-        });
+document.getElementById('info-icon').addEventListener('click', function() {
+    const modal = document.getElementById('info-modal');
+    if (modal.style.display === 'none' || !modal.style.display) {
+        modal.style.display = 'block';
     } else {
-        console.error('info-icon bulunamadı.');
+        modal.style.display = 'none';
+    }
+});
+
+// Close modal when clicking outside
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById('info-modal');
+    const infoBox = document.getElementById('info-box');
+    if (!infoBox.contains(event.target) && modal.style.display === 'block') {
+        modal.style.display = 'none';
     }
 });
