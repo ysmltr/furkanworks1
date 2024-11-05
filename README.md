@@ -1,6 +1,6 @@
 # Furkan Works
 
-Furkan Works, Türkiye üzerindeki çeşitli kafelerin ve mekanların konumlarını gösteren interaktif bir harita uygulamasıdır. Bu uygulama, kullanıcıların belirli kafelerin Google Maps üzerindeki yerlerini görüntülemelerine olanak tanır.
+Furkan Works, Dünya üzerindeki çeşitli kafelerin ve mekanların konumlarını gösteren bir harita uygulamasıdır. Bu uygulama, kullanıcıların belirli kafelerin Google Maps üzerindeki yerlerini görüntülemelerine olanak tanır.
 
 ## Özellikler
 
