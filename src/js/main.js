@@ -463,3 +463,32 @@ if (L.Browser.mobile) {
         map.panTo(map.unproject(px), { animate: true, duration: 0.5 });
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var infoIcon = document.getElementById('info-icon');
+    if (infoIcon) {
+        var infoModal = document.createElement('div');
+        infoModal.id = 'info-modal'; // Modal'a bir ID ekleyin
+        infoModal.style.display = 'none'; // Başlangıçta gizli olmalı
+        infoModal.innerHTML = `
+            <div>
+                <p>Kafelerin isimlerine tıklayarak Google Maps'te konumlarını görüntüleyebilirsiniz.</p>
+            </div>
+        `;
+        document.body.appendChild(infoModal);
+        var mapContainer = document.getElementById('map-container');
+
+        infoIcon.addEventListener('click', function() {
+            infoModal.style.display = 'block'; // Göster
+        });
+
+        // Harita üzerine tıklanınca popup'ı kapat
+        mapContainer.addEventListener('click', function(e) {
+            if (e.target !== infoIcon) {
+                infoModal.style.display = 'none';
+            }
+        });
+    } else {
+        console.error('info-icon bulunamadı.');
+    }
+});

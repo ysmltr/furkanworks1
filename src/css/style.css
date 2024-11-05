@@ -17,26 +17,32 @@
 }
 #info-box {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    border: 3px solid #343434;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    font-family: "Roboto", serif;
-    font-weight: 900;
-    font-style: italic;
+    top: 10px;  /* Yerleşim konumunu ayarlayın */
+    right: 10px; /* Sağ üst köşe için */
+    z-index: 1000; /* Harita katmanlarından üstte olmalı */ /* Yarı saydam arka plan */
+    padding: 5px; /* İç boşluk */
+    border-radius: 5px; /* Kenar yuvarlaklığı */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#info-box p {
-    margin: 0;
-    font-size: 14px;
-    color: #333;
-  
- 
+#info-modal {
+    display: none; /* Başlangıçta görünmez */
+    position: absolute; /* Pozisyonu mutlak yaparak, info-icon'a göre konumlandırabiliriz */
+    left: 90%;
+    top: 10%;
+    transform: translate(-50%, 0); /* Yatay merkezleme */
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
 }
+
+
+
 
 #map {
     width: 100%;
